@@ -1,0 +1,4 @@
+#create ubuntu command with password
+sudo echo password | sudo -S chown -R user /var/www/html/
+
+#

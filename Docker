@@ -1,0 +1,7 @@
+docker-compose up --build
+
+docker rm -v $(docker ps -a -q)
+
+docker stop $(docker ps -a -q) 
+
+docker rmi $(docker images -q) 
