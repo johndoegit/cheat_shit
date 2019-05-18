@@ -1,0 +1,19 @@
+<div class='container'>
+<?php 
+//$query = $this->db->query("CREATE TABLE foo (bar1 STRING, bar2 STRING)");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->query("INSERT INTO foo VALUES ('a1','asfasf')");
+$query = $this->db->list_fields("foo");
+
+$query = $this->db->field_data("foo");
+
+$query = $this->db->get("voters");
+
+//print_r($query->num_rows());
+print_r($query);
+?>
+</div>

@@ -1,0 +1,8 @@
+if(isset($_GET['user'])){
+$user_id = 1;
+$awesome_level = 1000;
+add_user_meta( $user_id, '_level_of_awesomeness', $awesome_level,true);
+ $user_last = get_user_meta( $user_id, '_level_of_awesomeness', $single ); 
+print_r($user_last);
+    //echo json_encode(wp_get_current_user());
+}

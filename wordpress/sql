@@ -1,0 +1,14 @@
+$sql = "SELECT * FROM $table WHERE $table_col = '$singlewhere_col_value' ";
+$query_table = $wpdb->get_results($sql);
+
+
+//echo "<pre>";
+//print_r($query_table_link);
+//echo "</pre>";
+// echo $three_table1_form1.'<br>';
+// echo $three_table1_form2.'<br>';
+// echo $three_table1_form3.'<br>';
+	
+select * from wp_term_relationships,wp_term_taxonomy,wp_terms 
+where wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id 
+AND wp_term_taxonomy.term_id = wp_terms.term_id AND wp_term_relationships.object_id = 1;

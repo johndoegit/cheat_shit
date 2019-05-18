@@ -1,0 +1,18 @@
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+
+     if (this.readyState == 4 && this.status == 200) {
+            if(this.responseText == 1){
+                alert(this.responseText);
+                $('#error').html(`
+                    <div class="card-panel red lighten-2 white-text">wrong user or pass</div>
+                    `);
+            }else{
+                localStorage.setItem('username',username);              
+                localStorage.setItem('password',password);              
+                product_page();
+            }     	
+      }
+}
+xhttp.open("GET", wordpress_url+'?username='+username+'&password='+password);
+xhttp.send();
