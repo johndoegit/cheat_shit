@@ -1,5 +1,5 @@
 php bin/magento setup:static-content:deploy
-php bin/magento setup:upgrade -f
+php bin/magento setup:upgrade 
 
 // SUDO
 sudo find . -type d -exec chmod 770 {} \; && sudo find . -type f -exec chmod 660 {} \; && sudo chmod u+x bin/magento
