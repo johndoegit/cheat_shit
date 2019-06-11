@@ -1,0 +1,4 @@
+        return $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('custom_block')
+            ->toHtml();
