@@ -1,0 +1,33 @@
+ public function getCategoryCustom()
+    {
+        $catId =2;
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+        $subcats = $subcategory->getChildrenCategories();
+        ?>
+        <ul >
+            <li> <span> All Categories </span> </li>
+            <?php
+
+            foreach ($subcats as $subcat) {
+
+                if ($subcat->getIsActive()) {
+
+                    $subcat_url = $subcat->getUrl();
+                    $subcat_img = "";
+                    $placeholder_img = "/media/placeholder.png";
+                    ?>
+                    <li>
+                        <a href="<?php echo $subcat_url; ?>">
+                            <?php echo $subcat->getName(); ?>
+                        </a>
+                    </li>
+
+                    <?php
+
+                }
+            }
+            ?>
+        </ul>
+        <?php
+    }
